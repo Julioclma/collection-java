@@ -19,7 +19,7 @@ public class ListaTarefa {
 
         for (Tarefa t : this.tarefaList) {
             if (t.getDescricao().equalsIgnoreCase(descricao)) {
-    tarefasParaRemover.add(t);
+                tarefasParaRemover.add(t);
             }
         }
 
@@ -27,14 +27,24 @@ public class ListaTarefa {
 
     }
 
-    public int allNumberTarefas(){
-       return this.tarefaList.size();
+    public int allNumberTarefas() {
+        return this.tarefaList.size();
     }
 
-    public void getAllDescriptionTarefas()
-    {
-            System.out.println(this.tarefaList);
+    public void getAllDescriptionTarefas() {
+        System.out.println(this.tarefaList);
     }
 
+
+    public static void main(String[] args) {
+        ListaTarefa listaTarefa = new ListaTarefa();
+
+        listaTarefa.add("Lógica Programação");
+
+     listaTarefa.getAllDescriptionTarefas();
+
+     listaTarefa.remove("Lógica Programação");
+        listaTarefa.getAllDescriptionTarefas();
+    }
 }
 
